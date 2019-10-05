@@ -15,7 +15,7 @@ export const register = newUser => {
 
 export const login = user => {
   return axios
-    .post(BASE_URL+'users/login', {
+    .post(BASE_URL+'/users/login', {
       email: user.email,
       password: user.password
     })
@@ -30,7 +30,7 @@ export const login = user => {
 
 export const getProfile = user => {
   return axios
-    .get(BASE_URL+'users/profile', {
+    .get(BASE_URL+'/users/profile', {
       //headers: { Authorization: ` ${this.getToken()}` }
     })
     .then(response => {
