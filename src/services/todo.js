@@ -1,7 +1,6 @@
 import update from 'immutability-helper';
 import axios from 'axios';
-let PORT = 5000
-let BASE_URL = "http://localhost:" + PORT
+let BASE_URL = "http://astridjerald.pythonanywhere.com"
 let headers = {
   "content-type": "application/json",
   "accept": "*/*"
