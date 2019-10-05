@@ -1,5 +1,5 @@
 import axios from 'axios'
-let BASE_URL = "http://astridjerald.pythonanywhere.com"
+let BASE_URL = "https://astridjerald.pythonanywhere.com"
 export const register = newUser => {
   return axios
     .post(BASE_URL+'/users/register', {
