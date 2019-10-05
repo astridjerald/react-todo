@@ -1,8 +1,8 @@
 import axios from 'axios'
-
+let BASE_URL = "http://astridjerald.pythonanywhere.com"
 export const register = newUser => {
   return axios
-    .post('users/register', {
+    .post(BASE_URL+'/users/register', {
       first_name: newUser.first_name,
       last_name: newUser.last_name,
       email: newUser.email,
@@ -15,7 +15,7 @@ export const register = newUser => {
 
 export const login = user => {
   return axios
-    .post('users/login', {
+    .post(BASE_URL+'users/login', {
       email: user.email,
       password: user.password
     })
@@ -30,7 +30,7 @@ export const login = user => {
 
 export const getProfile = user => {
   return axios
-    .get('users/profile', {
+    .get(BASE_URL+'users/profile', {
       //headers: { Authorization: ` ${this.getToken()}` }
     })
     .then(response => {
