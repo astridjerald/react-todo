@@ -12,7 +12,7 @@ class StateProvider extends Component {
     }
 
     componentDidMount() {
-        let resp = getAll(this.props.UserId)
+        let resp = getAll(this.props.user_id)
         resp.then(response => {
             console.log("Final data ", response)
             this.setState({ list: response.data })
@@ -33,7 +33,7 @@ class StateProvider extends Component {
 
     addNew(text) {
 
-        let response = addToList(this.state.list, { Title: text, UserId: this.props.UserId });
+        let response = addToList(this.state.list, { title: text, user_id: this.props.user_id });
         response.then(response => {
             console.log("state of list", this.state.list)
             let updatedList = [...this.state.list, ...response.data]

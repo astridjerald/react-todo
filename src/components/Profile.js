@@ -11,7 +11,7 @@ class Profile extends Component {
     const decoded = jwt_decode(token)
     console.log(decoded.identity)
     this.state = {
-      UserId: decoded.identity.UserId,
+      user_id: decoded.identity.user_id,
       first_name: decoded.identity.first_name,
       last_name: decoded.identity.last_name,
       email: decoded.identity.email,
@@ -21,9 +21,9 @@ class Profile extends Component {
 
 
   render() {
-    console.log("Profile userid", this.state.UserId)
+    console.log("Profile user_id", this.state.user_id)
     return (
-      <StateProvider UserId={this.state.UserId}>
+      <StateProvider user_id={this.state.user_id}>
         <TodoList />
       </StateProvider>
     )

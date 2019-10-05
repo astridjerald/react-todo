@@ -42,7 +42,7 @@ const service = {
  */
 export function getAll(id) {
   let data = []
-  return service.post(BASE_URL + `/todo/get`, { 'UserId': id })
+  return service.post(BASE_URL + `/todo/get`, { 'user_id': id })
 }
 
 export function getItemById(itemId) {

@@ -10,7 +10,7 @@ export default function TodoItem(props) {
         <li className={className}>
             <div className="checkbox">
                 <label>
-                    <CheckBox checked={data._is_done} onChange={handleChange}/> {data.Title}
+                    <CheckBox checked={data._is_done} onChange={handleChange}/> {data.title}
                 </label>
                 <div style={{float: "right"}}>
                     <a onClick={handleDelete}>Delete</a>
