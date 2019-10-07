@@ -1,2 +1,2 @@
-# ReactJS, MySQL, Flask Todo List
-A todo list sample application with MySQL, ReactJS, Flask
+# ReactJS Todo List with Auth
+A todo list React app complete with Auth.
